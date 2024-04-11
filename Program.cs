@@ -12,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAutorService,AutorService>();
+builder.Services.AddScoped<ILivroService,LivroService>();
+
 
 builder.Services.AddDbContext<LivrariaDbContext>(options =>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
